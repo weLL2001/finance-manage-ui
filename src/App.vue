@@ -1,32 +1,29 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+     <!-- <el-button type="primary" @click="test">主要按钮</el-button> -->
+     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+  import reqInstance from '@/utils/request'
+  import pretty from '@/utils/pretty'
+  export default {
+    methods:{
+    /*   async test(){
+      //  let res =  await axios.post("/user/login",{account:'admin',password:'approve123456.'})
+          let [err,res] = await pretty(reqInstance.post("/user/login",{account:'admin',password:'approve123456.'}))
+          console.log('err',err,'res',res)
+      } */
     }
   }
-}
+</script>
+
+
+<style scoped >
+   #app{
+    width: 100%;
+    height: 100%;
+   }
 </style>
